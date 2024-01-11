@@ -1,7 +1,7 @@
 # react_study_blog
 react 기초문법 학습을 위한 블로그 제작
 
-# 해당 프로젝트에서 학습 내용
+# 해당 프로젝트 학습 내용
 - jsx
 - state
 - state변경
