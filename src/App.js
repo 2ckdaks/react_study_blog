@@ -9,10 +9,9 @@ function App() {
     '강남 우동맛집',
     '파이썬 독학',
   ]);
-
   let [따봉, 따봉변경] = useState([0, 0, 0]);
-
   let [modal, setModal] = useState(false);
+  let [title, setTitle] = useState();
 
   return (
     <div className='App'>
@@ -25,6 +24,7 @@ function App() {
             <h4
               onClick={() => {
                 setModal(!modal);
+                setTitle(i);
               }}
             >
               {글제목[i]}{' '}
@@ -54,16 +54,16 @@ function App() {
         );
       })}
 
-      {modal == true ? <Modal></Modal> : null}
+      {modal == true ? <Modal 글제목={글제목} title={title} /> : null}
     </div>
   );
 }
 
-function Modal() {
+function Modal(props) {
   return (
     <div className='modal'>
-      <h4>제목</h4>
-      <p>날짜</p>
+      <h4>{props.글제목[props.title]}</h4>
+      <p>2월 17일 발행</p>
       <p>상세내용</p>
     </div>
   );
