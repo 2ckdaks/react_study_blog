@@ -21,7 +21,11 @@ function App() {
       </div>
 
       <div className='list'>
-        <h4>
+        <h4
+          onClick={() => {
+            setModal(!modal);
+          }}
+        >
           {글제목[0]}{' '}
           <span
             onClick={() => {
