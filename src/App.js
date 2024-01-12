@@ -82,8 +82,8 @@ function Modal(props) {
 }
 
 class Modal2 extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: 'changmin',
       age: 27,
@@ -96,6 +96,7 @@ class Modal2 extends React.Component {
         <h4>class를 이용하여 컴포넌트 생성</h4>
         <span>{this.state.name}</span>
         <span>{this.state.age}</span>
+        <span>{this.props.프롭스이름}</span>
         <button
           onClick={() => {
             this.setState({ age: 23 });
