@@ -29,7 +29,8 @@ function App() {
             >
               {글제목[i]}{' '}
               <span
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation(); // 이벤트 버블링을 방지
                   let copy = [...따봉];
                   copy[i] = copy[i] + 1;
                   따봉변경(copy);
@@ -54,18 +55,6 @@ function App() {
       })}
 
       {modal == true ? <Modal></Modal> : null}
-      {/* <div className='list'>
-        <h4>
-          {글제목[1]} <span>👍</span> {따봉}{' '}
-        </h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <div className='list'>
-        <h4>
-          {글제목[2]} <span>👍</span> {따봉}{' '}
-        </h4>
-        <p>2월 17일 발행</p>
-      </div> */}
     </div>
   );
 }
