@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import { render } from '@testing-library/react';
 
 function App() {
   let [글제목, 글제목변경] = useState([
@@ -78,6 +79,20 @@ function Modal(props) {
       <p>상세내용</p>
     </div>
   );
+}
+
+class Modal2 extends React.Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <div>
+        <h4>class를 이용하여 컴포넌트 생성</h4>
+      </div>
+    );
+  }
 }
 
 export default App;
