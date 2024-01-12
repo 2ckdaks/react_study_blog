@@ -96,6 +96,11 @@ class Modal2 extends React.Component {
         <h4>class를 이용하여 컴포넌트 생성</h4>
         <span>{this.state.name}</span>
         <span>{this.state.age}</span>
+        <button
+          onClick={() => {
+            this.setState({ age: 23 });
+          }}
+        ></button>
       </div>
     );
   }
